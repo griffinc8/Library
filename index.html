@@ -9,8 +9,18 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
     <div class="header">
         <div class="Title">Library</div>
+        <div><button onclick="openPopup()">+</button></div>
+        <div class="popup" id = "popup">
+            <form >
+                <label for="first_name">First Name:</label>
+                <input type="text" id="first_name">
+
+                <button type="submit" onclick="closePopup()">Submit</button>
+            </form>
+        </div>
     </div>
     <div class="container">
         <div class="button">
@@ -22,5 +32,17 @@
             </div>
         </div>
     </div>
+
+    <script>
+        let popup = document.getElementById("popup");
+        console.log(popup)
+        function openPopup() {
+            popup.classList.add("open-popup")
+        }
+
+        function closePopup() {
+            popup.classList.remove("open-popup")
+        }
+    </script>
 </body>
 </html>
